@@ -23,7 +23,9 @@ abstract public class Brick  {
     public static final int RIGHT_IMPACT = 400;
 
 
-
+    /**
+     *
+     */
     public class Crack{
 
         private static final int CRACK_SECTIONS = 3;
@@ -43,7 +45,11 @@ abstract public class Brick  {
         private int crackDepth;
         private int steps;
 
-
+        /**
+         *
+         * @param crackDepth
+         * @param steps
+         */
         public Crack(int crackDepth, int steps){
 
             crack = new GeneralPath();
@@ -216,6 +222,10 @@ abstract public class Brick  {
         return  border;
     }
 
+    /**
+     *
+     * @return
+     */
     public Color getInnerColor(){
         return inner;
     }
