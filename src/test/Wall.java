@@ -21,7 +21,9 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Random;
 
-
+/**
+ * This class is to create the wall for the game
+ */
 public class Wall {
 
     private static final int LEVELS_COUNT = 4;
@@ -45,6 +47,14 @@ public class Wall {
     private int ballCount;
     private boolean ballLost;
 
+    /**
+     * this is to initialise the variables in Wall class
+     * @param drawArea calculate the area of the player
+     * @param brickCount count the number of bricks
+     * @param lineCount
+     * @param brickDimensionRatio
+     * @param ballPos the position of the ball
+     */
     public Wall(Rectangle drawArea, int brickCount, int lineCount, double brickDimensionRatio, Point ballPos){
 
         this.startPoint = new Point(ballPos);
@@ -75,6 +85,15 @@ public class Wall {
 
     }
 
+    /**
+     *
+     * @param drawArea
+     * @param brickCnt
+     * @param lineCnt
+     * @param brickSizeRatio
+     * @param type
+     * @return
+     */
     private Brick[] makeSingleTypeLevel(Rectangle drawArea, int brickCnt, int lineCnt, double brickSizeRatio, int type){
         /*
           if brickCount is not divisible by line count,brickCount is adjusted to the biggest
