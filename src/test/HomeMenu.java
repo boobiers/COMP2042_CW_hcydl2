@@ -25,6 +25,9 @@ import java.awt.event.MouseMotionListener;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
 
+/**
+ * this is to create the home menu for the game
+ */
 
 public class HomeMenu extends JComponent implements MouseListener, MouseMotionListener {
 
@@ -61,7 +64,11 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
     private boolean startClicked;
     private boolean menuClicked;
 
-
+    /**
+     * this is the layout for the home menu
+     * @param owner this is the game frame
+     * @param area the are for the rectangle
+     */
     public HomeMenu(GameFrame owner,Dimension area){
 
         this.setFocusable(true);
@@ -94,11 +101,19 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
     }
 
 
+    /**
+     *  this is to paint the menu
+     * @param g object for graphics
+     */
     public void paint(Graphics g){
         drawMenu((Graphics2D)g);
     }
 
 
+    /**
+     * this is to draw the menu for the game
+     * @param g2d object for graphics2D
+     */
     public void drawMenu(Graphics2D g2d){
 
         drawContainer(g2d);
@@ -126,6 +141,10 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         g2d.setColor(prevColor);
     }
 
+    /**
+     * this is to draw the container for the home menu
+     * @param g2d object for graphics2D
+     */
     private void drawContainer(Graphics2D g2d){
         Color prev = g2d.getColor();
 
@@ -147,6 +166,10 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         g2d.setColor(prev);
     }
 
+    /**
+     * this is to get the text color, font size and layout of the text
+     * @param g2d object for graphics2D
+     */
     private void drawText(Graphics2D g2d){
 
         g2d.setColor(TEXT_COLOR);
@@ -180,6 +203,10 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
 
     }
 
+    /**
+     * this is to create the buttons for the home menu before the game starts
+     * @param g2d object for graphics2D
+     */
     private void drawButton(Graphics2D g2d){
 
         FontRenderContext frc = g2d.getFontRenderContext();

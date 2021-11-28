@@ -22,7 +22,9 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-
+/**
+ * this is to create the debug panel for the game
+ */
 
 public class DebugPanel extends JPanel {
 
@@ -37,6 +39,10 @@ public class DebugPanel extends JPanel {
 
     private Wall wall;
 
+    /**
+     * the panel that allow user to change the levels and speed of the ball
+     * @param wall the wall of the game
+     */
     public DebugPanel(Wall wall){
 
         this.wall = wall;
@@ -57,17 +63,33 @@ public class DebugPanel extends JPanel {
 
     }
 
+    /**
+     * this is to initialize the panel
+     */
     private void initialize(){
         this.setBackground(DEF_BKG);
         this.setLayout(new GridLayout(2,2));
     }
 
+    /**
+     * this is to make the button for the panels
+     * @param title the title for the button
+     * @param e the object for action listener
+     * @return the button for the panel
+     */
     private JButton makeButton(String title, ActionListener e){
         JButton out = new JButton(title);
         out.addActionListener(e);
         return  out;
     }
 
+    /**
+     * this is to make the slider for the panels
+     * @param min the minimum value on slider
+     * @param max the maximum value on slider
+     * @param e the object for change listener
+     * @return the slider for the panel
+     */
     private JSlider makeSlider(int min, int max, ChangeListener e){
         JSlider out = new JSlider(min,max);
         out.setMajorTickSpacing(1);
@@ -77,6 +99,11 @@ public class DebugPanel extends JPanel {
         return out;
     }
 
+    /**
+     * this is to set the values of the ball speed
+     * @param x the x coordinate for the ball speed
+     * @param y the y coordinate for the ball speed
+     */
     public void setValues(int x,int y){
         ballXSpeed.setValue(x);
         ballYSpeed.setValue(y);

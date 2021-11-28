@@ -24,6 +24,9 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 import java.awt.event.WindowListener;
 
+/**
+ * this is to create the game frame for game
+ */
 
 public class GameFrame extends JFrame implements WindowFocusListener {
 
@@ -34,6 +37,9 @@ public class GameFrame extends JFrame implements WindowFocusListener {
 
     private boolean gaming;
 
+    /**
+     * creating the game frame for the game
+     */
     public GameFrame(){
         super();
 
@@ -52,6 +58,9 @@ public class GameFrame extends JFrame implements WindowFocusListener {
 
     }
 
+    /**
+     * this is to initialize the values
+     */
     public void initialize(){
         this.setTitle(DEF_TITLE);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -60,6 +69,9 @@ public class GameFrame extends JFrame implements WindowFocusListener {
         this.setVisible(true);
     }
 
+    /**
+     * this is to enable the gameboard
+     */
     public void enableGameBoard(){
         this.dispose();
         this.remove(homeMenu);
@@ -71,6 +83,9 @@ public class GameFrame extends JFrame implements WindowFocusListener {
 
     }
 
+    /**
+     * this is to locate the game
+     */
     private void autoLocate(){
         Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (size.width - this.getWidth()) / 2;
