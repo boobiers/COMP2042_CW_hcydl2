@@ -1,4 +1,4 @@
-package test;
+package wallBrick;
 
 import java.awt.*;
 import java.awt.geom.GeneralPath;

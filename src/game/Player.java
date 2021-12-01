@@ -15,11 +15,11 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package test;
+package game;
+
+import ball.Ball;
 
 import java.awt.*;
-import java.awt.geom.Point2D;
-import java.awt.geom.Rectangle2D;
 
 /**
  * This class is to make the player (rectangle)
@@ -71,7 +71,7 @@ public class Player {
      * @return boolean
      */
     public boolean impact(Ball b){
-        return playerFace.contains(b.getPosition()) && playerFace.contains(b.down) ;
+        return playerFace.contains(b.getPosition()) && playerFace.contains(b.getDown()) ;
     }
 
     /**

@@ -15,7 +15,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package test;
+package ball;
 
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
@@ -25,8 +25,6 @@ import java.awt.geom.Point2D;
  * This class makes the Rubber ball which inherits the class Ball
  */
 public class RubberBall extends Ball {
-
-
 
     private static final int DEF_RADIUS = 10;
     private static final Color DEF_INNER_COLOR = new Color(255, 219, 88);
