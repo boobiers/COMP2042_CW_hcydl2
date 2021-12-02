@@ -25,9 +25,8 @@ abstract public class Brick  {
     public static final int RIGHT_IMPACT = 400;
 
 
+
     /**
-     * This class is to make the Crack for the Brick
-     */
     public class Crack{
 
         private static final int CRACK_SECTIONS = 3;
@@ -47,11 +46,7 @@ abstract public class Brick  {
         private int crackDepth;
         private int steps;
 
-        /**
-         * how deep the crack that forms in the brick
-         * @param crackDepth the depth of the crack that was form
-         * @param steps the steps before brick breaking
-         */
+
         public Crack(int crackDepth, int steps){
 
             crack = new GeneralPath();
@@ -61,27 +56,18 @@ abstract public class Brick  {
         }
 
 
-        /**
-         * draw the bricks
-         * @return crack
-         */
+
         public GeneralPath draw(){
 
             return crack;
         }
 
-        /**
-         * resets the crack
-         */
+
         public void reset(){
             crack.reset();
         }
 
-        /**
-         * make crack based on which direction the ball is coming from
-         * @param point the point at which the ball hits the brick
-         * @param direction the direction at which the ball is coming from
-         */
+
         protected void makeCrack(Point2D point, int direction){
             Rectangle bounds = Brick.this.brickFace.getBounds();
 
@@ -122,11 +108,7 @@ abstract public class Brick  {
             }
         }
 
-        /**
-         * make the small zig-zag line for the crack
-         * @param start starting point of impact
-         * @param end ending point of impact
-         */
+
         protected void makeCrack(Point start, Point end){
 
             GeneralPath path = new GeneralPath();
@@ -150,6 +132,7 @@ abstract public class Brick  {
                 if(inMiddle(i,CRACK_SECTIONS,steps))
                     y += jumps(jump,JUMP_PROBABILITY);
 
+
                 path.lineTo(x,y);
 
             }
@@ -158,23 +141,13 @@ abstract public class Brick  {
             crack.append(path,true);
         }
 
-        /**
-         * make ball bounce off in random direction
-         * @param bound
-         * @return random integer
-         */
+
         private int randomInBounds(int bound){
             int n = (bound * 2) + 1;
             return rnd.nextInt(n) - bound;
         }
 
-        /**
-         *
-         * @param i
-         * @param steps
-         * @param divisions
-         * @return
-         */
+
         private boolean inMiddle(int i,int steps,int divisions){
             int low = (steps / divisions);
             int up = low * (divisions - 1);
@@ -190,13 +163,8 @@ abstract public class Brick  {
 
         }
 
-        /**
-         * make a random point for the Crack
-         * @param from from one point on the brick
-         * @param to to one point on the brcik
-         * @param direction to see if direction is vertical or horizontal
-         * @return new point generated
-         */
+
+
         private Point makeRandomPoint(Point from,Point to, int direction){
 
             Point out = new Point();
@@ -216,6 +184,8 @@ abstract public class Brick  {
         }
 
     }
+     */
+
 
     private static Random rnd;
 

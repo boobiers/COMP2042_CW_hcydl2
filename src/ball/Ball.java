@@ -201,35 +201,66 @@ abstract public class Ball {
         return speedY;
     }
 
-
+    /**
+     * returns the up value
+     * @return the up direction
+     */
     public Point2D getUp() {
         return up;
     }
 
+    /**
+     * set the direction to up
+     * @param up the upward direction of the ball
+     */
     public void setUp(Point2D up) {
         this.up = up;
     }
 
+    /**
+     * returns the down value
+     * @return the downward direction of the ball
+     */
     public Point2D getDown() {
         return down;
     }
 
+    /**
+     * set the direction to down
+     * @param down the downward direction of the ball
+     */
     public void setDown(Point2D down) {
         this.down = down;
     }
 
+    /**
+     * returns the left value
+     * @return the leftward direction of the ball
+     */
     public Point2D getLeft() {
         return left;
     }
 
+    /**
+     * set the direction to left
+     * @param left the left direction of the ball
+     */
     public void setLeft(Point2D left) {
         this.left = left;
     }
 
+    /**
+     * return the right direction
+     * @return the right direction of the ball
+     */
     public Point2D getRight() {
         return right;
     }
 
+    /**
+     * set the direction to right
+     * @param right the right direction of the ball
+     */
     public void setRight(Point2D right) {
         this.right = right;
     }
