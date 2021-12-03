@@ -153,22 +153,6 @@ public class Crack{
         return rnd.nextInt(n) - bound;
     }
 
-    /**
-     private boolean inMiddle(int i,int steps,int divisions){
-     int low = (steps / divisions);
-     int up = low * (divisions - 1);
-
-     return  (i > low) && (i < up);
-     }
-
-     private int jumps(int bound,double probability){
-
-     if(rnd.nextDouble() > probability)
-     return randomInBounds(bound);
-     return  0;
-
-     }
-     **/
 
     /**
      * make a random point for the Crack

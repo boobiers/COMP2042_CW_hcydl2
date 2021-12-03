@@ -419,6 +419,10 @@ public class Wall {
         return  out;
     }
 
+    /**
+     *
+     * @return
+     */
     public Brick[] getBricks() {
         return bricks;
     }
