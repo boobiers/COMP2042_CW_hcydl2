@@ -81,7 +81,6 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
 
         this.owner = owner;
 
-
         menuFace = new Rectangle(new Point(0,0),area);
         this.setPreferredSize(area);
 
@@ -300,6 +299,11 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
             System.out.println("Goodbye " + System.getProperty("user.name"));
             System.exit(0);
         }
+
+        else if(infoButton.contains(p)){
+            new InfoFrame();
+        }
+
     }
 
     @Override
@@ -315,6 +319,11 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
             repaint(menuButton.x,menuButton.y,menuButton.width+1,menuButton.height+1);
         }
 
+        else if(infoButton.contains(p)){
+            infoCLicked = true;
+            repaint(infoButton.x,infoButton.y,infoButton.width+1,infoButton.height+1);
+        }
+
 
     }
 
@@ -327,6 +336,10 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         else if(menuClicked){
             menuClicked = false;
             repaint(menuButton.x,menuButton.y,menuButton.width+1,menuButton.height+1);
+        }
+        else if(infoCLicked){
+            infoCLicked = false;
+            repaint(infoButton.x,infoButton.y,infoButton.width+1,infoButton.height+1);
         }
     }
 
@@ -349,7 +362,7 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
     @Override
     public void mouseMoved(MouseEvent mouseEvent) {
         Point p = mouseEvent.getPoint();
-        if(startButton.contains(p) || menuButton.contains(p))
+        if(startButton.contains(p) || menuButton.contains(p) || infoButton.contains(p))
             this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         else
             this.setCursor(Cursor.getDefaultCursor());
