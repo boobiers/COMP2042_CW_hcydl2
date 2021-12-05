@@ -8,7 +8,7 @@ import java.awt.event.WindowFocusListener;
 public class InfoFrame extends JFrame{
 
     private static final int DEF_WIDTH = 600;
-    private static final int DEF_HEIGHT = 450;
+    private static final int DEF_HEIGHT = 500;
     private static final String DEF_TITLE = "Game Information";
     private static final int TEXT_SIZE = 20;
     private static final Color BG_COLOR = Color.WHITE;
@@ -45,7 +45,16 @@ public class InfoFrame extends JFrame{
     private void InfoText(){
 
         label = new JLabel();
-        label.setText("");
+        label.setText("<html>" + "Game information <br><br>" +
+                "<b>Goal:</b><br>" +
+                "Destroy all the bricks without losing all 3 balls<br>" +
+                "<br>" +
+                "<b>Controls:</b>" +
+                "<br>" +
+                "'A' to move bar to the left<br>" +
+                "'D' to move your mom<br>" +
+                "'ALT + SHIFT + F1' to open debug console<br>" +
+                "'ESC' to pause ");
 
         label.setFont(new Font(null,Font.PLAIN,TEXT_SIZE));
         label.setBounds(30,30,450,350);
