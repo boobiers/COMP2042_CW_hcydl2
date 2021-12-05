@@ -51,10 +51,12 @@ public class InfoFrame extends JFrame{
                 "<br>" +
                 "<b>Controls:</b>" +
                 "<br>" +
-                "'A' to move bar to the left<br>" +
-                "'D' to move your mom<br>" +
+                "'A' to move player to the left<br>" +
+                "'D' to move player to the right<br>" +
                 "'ALT + SHIFT + F1' to open debug console<br>" +
-                "'ESC' to pause ");
+                "'ESC' to pause <br><br> " +
+                "<html><font color=red size=4> press 'X' to go back to game menu");
+
 
         label.setFont(new Font(null,Font.PLAIN,TEXT_SIZE));
         label.setBounds(30,30,450,350);
