@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 
+/**
+ * This is to create the info frame when infor button is clicked in game
+ */
 public class InfoFrame extends JFrame{
 
     private static final int DEF_WIDTH = 600;
@@ -14,6 +17,9 @@ public class InfoFrame extends JFrame{
     private static final Color BG_COLOR = Color.WHITE;
     private JLabel label;
 
+    /**
+     * This is to run the info frame when it is called
+     */
     public InfoFrame(){
 
         initialize();
@@ -21,6 +27,9 @@ public class InfoFrame extends JFrame{
         this.add(label);
     }
 
+    /**
+     * this is to initialize the variables in info frame class
+     */
     public void initialize(){
 
         this.setTitle(DEF_TITLE);
@@ -34,6 +43,9 @@ public class InfoFrame extends JFrame{
 
     }
 
+    /**
+     * this is to locate the frame for the info frame
+     */
     private void autoLocate(){
         Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (size.width - this.getWidth()) / 2;
@@ -42,6 +54,9 @@ public class InfoFrame extends JFrame{
     }
 
 
+    /**
+     * this is to show the text when info frame is clicked
+     */
     private void InfoText(){
 
         label = new JLabel();
