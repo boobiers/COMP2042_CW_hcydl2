@@ -425,29 +425,49 @@ public class Wall {
     }
 
     /**
-     *
+     * This is to get the bricks (getter)
      * @return
      */
     public Brick[] getBricks() {
         return bricks;
     }
 
+    /**
+     * This is to set the values into bricks (setter)
+     * @param bricks
+     */
     public void setBricks(Brick[] bricks) {
         this.bricks = bricks;
     }
 
+    /**
+     * This is to get the ball (getter)
+     * @return
+     */
     public Ball getBall() {
         return ball;
     }
 
+    /**
+     * This is to set the values into ball (setter)
+     * @param ball
+     */
     public void setBall(Ball ball) {
         this.ball = ball;
     }
 
+    /**
+     * This is to get the player (getter)
+     * @return
+     */
     public Player getPlayer() {
         return player;
     }
 
+    /**
+     * This is to set the values into player (setter)
+     * @param player
+     */
     public void setPlayer(Player player) {
         this.player = player;
     }
