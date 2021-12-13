@@ -6,7 +6,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 
 /**
- * This is to create the info frame when infor button is clicked in game
+ * This is to create the info frame when information button is clicked in game
  */
 public class InfoFrame extends JFrame{
 
